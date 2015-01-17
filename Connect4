@@ -1,0 +1,257 @@
+import zen.core.Zen;
+
+public class Connect4 {
+	
+	static int[][] board;
+	static int current = 1;
+	
+	public static void main(String[] args) {
+		Zen.create(700, 600);
+		board = new int[7][6];
+		draw();
+		while(true){
+			if(Zen.isMouseClicked()){
+				int x = Zen.getMouseX()/100;
+				checkPiece(x, current);
+				current = 1 + current%2;
+				draw();
+				checkWin();
+				Zen.sleep(1000);
+			}
+			
+		}
+	}
+	private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+	}
+	private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}private static int checkWin() {
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		return 0;
+		
+	}
+	
+
+	public static void draw() {
+		Zen.setBackground("yellow");
+		for (int x = 0 ; x < 7 ; x++) {
+			for (int y = 0 ; y < 6 ; y++) {
+				if (board[x][y] == 0) {
+					Zen.setColor("black");
+				}
+				else if (board[x][y] == 1) {
+					Zen.setColor("red");
+				}
+				else if (board[x][y] == 2) {
+					Zen.setColor("blue");
+				}
+				Zen.fillOval(x * 100 + 10, y * 100 + 10, 80, 80);
+			}
+		}
+		Zen.buffer(1);
+	}
+	
+	public static void checkPiece(int column, int piece) {
+		if (board[column][0] != 0 || column < 0 || column > 6) {
+			return;
+		}
+		int y = 0;
+		while (y < 5 && board[column][y + 1] == 0) {
+			y++;
+		}
+		board[column][y] = piece;
+	}
+	
+			
+		
+}
+
+
+	
+	
+	
+
+
