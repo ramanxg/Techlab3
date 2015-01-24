@@ -1,0 +1,124 @@
+import zen.core.Zen;
+
+public class Checkers {
+
+	static int[][]board;
+	public static final int scale = 75;
+	public static final int height = 8;
+	public static final int width = 8;
+	
+	static int player = 1;
+	static int ax = -1, ay = -1;
+
+	public static void main(String[] args) {
+		start();
+		setup();
+		draw();
+		
+		while (true) {
+			if (Zen.isMouseClicked()) {
+				click(Zen.getMouseX() / scale, Zen.getMouseY() / scale);
+				draw();
+
+				Zen.sleep(100);
+			}
+		}
+	}
+
+	private static void click(int x, int y) {
+		if (highlight(x, y)) {
+			move(ax, ay, x, y);
+		}
+		else if (board[x][y] == player) {
+			ax = x;
+			ay = y;
+		}
+	}
+
+	private static void move(int startx, int starty, int x, int y) {
+		board[x][y] = board[startx][starty];
+		board[startx][starty] = 0;
+		player = 1 + player % 2;
+	}
+	
+	private static boolean highlight(int x, int y) {
+		 // If there is no active square selected.
+		 if (ax < 0 || ay < 0) {
+			 return false;
+		 }
+		 // You're checking for the red player that moves down.
+		 else if (player == 1) {
+			 if (x == ax - 1 && y == ay + 1 && board[ax - 1][ay + 1] == 0) {
+				 return true;
+			 }
+			 if (x == ax + 1 && y == ay + 1 && board[ax + 1][ay + 1] == 0) {
+				 return true;
+			 }
+		 }
+		 // Otherwise, you're checking for the black player that moves up.
+		 else {
+			 if (x == ax - 1 && y == ay - 1 && board[ax - 1][ay - 1] == 0) {
+				 return true;
+			 }
+			 if (x == ax + 1 && y == ay - 1 && board[ax + 1][ay - 1] == 0) {
+				 return true;
+			 }
+		 }
+		 return false;
+	 }
+
+	public static void start() {
+		Zen.create(height * scale, width * scale);
+		board = new int [width][height];
+
+	}
+
+	public static void draw() {
+		Zen.setBackground("tan");
+		for(int x = 0; x < width; x++){
+			for(int y = 0; y < height; y++){
+				if(x%2 == y%2){
+					Zen.setColor("yellow");
+					Zen.fillRect(x *scale, y * scale, scale, scale);
+
+				}
+				if(board[x][y] > 0){
+					if(board[x][y] == 1) {
+						Zen.setColor("black");
+					}
+					else {
+						Zen.setColor("red");	
+					}
+					Zen.fillOval(x* scale + scale/10, y* scale+ scale/10, scale* 8/10, scale*8/10);
+				}
+			}
+		}
+		Zen.buffer(1);
+	}
+	public static void setup() {
+		int rows = (int) Math.ceil(height/3.0);
+		for(int x = 0; x < width; x++){
+			for(int y =0; y < rows; y++){
+				if(x%2 == y%2){
+					board[x][y] = 1;
+				}
+			}
+		}
+		for(int x = 0; x < height; x++){
+			for(int y = height - rows; y < height; y++){
+				if(x%2 == y%2){
+					board[x][y] = 2;
+				}
+			}
+		}
+
+
+	}
+
+
+
+}
+
+
+
+
