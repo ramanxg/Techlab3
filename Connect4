@@ -31,188 +31,235 @@ public class Connect4 {
 				}
 			}
 		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y-1] == board[x+1][y-1]&& board [x+1][y-1] == board[x+2][y-1]&& board[x+2][y-1] == board[x+3][y-1]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y-2] == board[x+1][y-2]&& board [x+1][y-2] == board[x+2][y-2]&& board[x+2][y-2] == board[x+3][y-2]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		for(int x = 0; x < 4; x ++){
+			for(int y = 0; y < 6; y ++){
+				if(board[x][y]!= 0){
+					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
+						return board[x][y];
+					}
+				}
+			}
+		}
+		
+		return 0;
 	}
-	private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}private static int checkWin() {
-		for(int x = 0; x < 4; x ++){
-			for(int y = 0; y < 6; y ++){
-				if(board[x][y]!= 0){
-					if(board[x][y] == board[x+1][y]&& board [x+1][y] == board[x+2][y]&& board[x+2][y] == board[x+3][y]){
-						return board[x][y];
-					}
-				}
-			}
-		}
-		return 0;
-		
-	}
+	
 	
 
 	public static void draw() {
@@ -251,6 +298,10 @@ public class Connect4 {
 
 
 	
+	
+	
+
+
 	
 	
 
