@@ -20,7 +20,7 @@ public class Checkers {
 				click(Zen.getMouseX() / scale, Zen.getMouseY() / scale);
 				draw();
 
-				Zen.sleep(100);
+				Zen.sleep(500);
 			}
 		}
 	}
@@ -32,6 +32,9 @@ public class Checkers {
 		else if (board[x][y] == player) {
 			ax = x;
 			ay = y;
+		}
+		else {
+			
 		}
 	}
 
@@ -54,6 +57,15 @@ public class Checkers {
 			 if (x == ax + 1 && y == ay + 1 && board[ax + 1][ay + 1] == 0) {
 				 return true;
 			 }
+			 if( board[ax - 1][ay + 1] == 0 && board [ax - 2][ay + 2] == 0 && x == ax +2 && y == ay + 2){
+				
+				 return true;
+			 }
+			 if( board[ax + 1][ay + 1] == 0 && board [ax + 2][ay + 2] == 0 && x == ax - 2 && y == ay +2){
+		
+				 return true;
+			 }
+			 
 		 }
 		 // Otherwise, you're checking for the black player that moves up.
 		 else {
@@ -63,6 +75,14 @@ public class Checkers {
 			 if (x == ax + 1 && y == ay - 1 && board[ax + 1][ay - 1] == 0) {
 				 return true;
 			 }
+			 if( board[ax + 1][ay - 1] == 1 && board [ax + 2][ay - 2] == 0 && x == ax +2 && y == ay -2){
+				 return true;
+			 }
+			 if( board[ax - 1][ay - 1] == 1 && board [ax - 2][ay - 2] == 0 && x == ax - 2 && y == ay - 2){
+			
+				 return true;
+			 }
+			 
 		 }
 		 return false;
 	 }
@@ -118,6 +138,8 @@ public class Checkers {
 
 
 }
+
+
 
 
 
