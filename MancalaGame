@@ -1,0 +1,74 @@
+import zen.core.*;
+
+public class MancalaGame {
+	
+	static int[] mancala = new int[14];
+	static int scale = 100;
+	static int x = 0;
+	
+	public static void main(String[] args){
+		setup();
+		drawPit();
+	}
+
+	public static void drawPit() {
+		Zen.setColor("brown");
+		
+	
+		
+		for(x = 0; x < 14; x ++){
+			
+			
+			
+			if(x ==6){
+				Zen.fillOval(  x * scale + 100, 50 ,  75, 200);
+				Zen.drawText(Integer.toString(mancala[x]), x * scale + 100 , 225);
+			}
+			else if ( x == 13){
+				Zen.fillOval( x - x, 50, 75, 200);
+				Zen.drawText(Integer.toString(mancala[x]), x -x , 50);
+			}
+			else if(x < 6){
+				Zen.fillOval(x * scale + 100 , 150, 75, 75);
+				Zen.drawText(Integer.toString(mancala[x]), x * scale + 100 , 225);
+			}
+			else if(x > 6 && x < 13){				
+				Zen.fillOval((x - 7) * scale + 100, 50, 75, 75);
+				Zen.drawText(Integer.toString(mancala[x]), (x - 7) * scale + 100 , 65);
+			}
+			
+			if(x != 6 && x!= 13){
+				mancala[x] = 4;
+				//Zen.drawText(Integer.toString(mancala[x + 1]), x * scale + 100 , 225);
+				//Zen.drawText(Integer.toString(mancala[x + 1]), (x-7) * scale + 100 , 65);
+			}
+			else {
+				mancala[x] = 0;
+			
+			}
+			
+		
+		}
+		
+		
+	}
+
+	public static void setup() {
+		for(x = 0; x < 14; x++){
+			if(x!=6 && x != 13){
+				mancala[x] = 4;
+			}
+			else{
+				mancala[x] = 0;
+			}
+		}
+		
+		Zen.create (8*scale, 3*scale);
+		Zen.setBackground("tan");
+		
+		
+	}
+	
+	
+
+}
