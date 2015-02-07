@@ -1,74 +1,233 @@
 import zen.core.*;
 
 public class MancalaGame {
-	
+
 	static int[] mancala = new int[14];
 	static int scale = 100;
-	static int x = 0;
-	
+	static int player = 1;
+
 	public static void main(String[] args){
 		setup();
-		drawPit();
+		draw();
+		while(true) {
+			if(Zen.isMouseClicked()){
+				click(Zen.getMouseX(), Zen.getMouseY());
+
+				draw();
+				Zen.sleep(250);
+			}
+		}
+
 	}
 
-	public static void drawPit() {
-		Zen.setColor("brown");
-		
-	
-		
+	public static void click(int x, int y) {
+		int temp = -1;
+		int index = -1;
+
+		if (player == 1)
+		{
+			if (y >= 150 && y <= 225)
+			{
+				for (int i = 100; i <= 675; i += 100)
+				{
+					if (x >= i && x <= i + 75)
+					{
+						index = i/scale - 1;
+
+						if (mancala[index] == 0)
+							return;
+
+						temp = mancala[index];
+						mancala[index] = 0;
+					}
+				}
+				
+				
+					player = 2;
+				
+			}
+		}
+
+		if (player == 2)
+		{
+			if (y >= 10 && y <= 90)
+			{
+				if (x >= 100 && x <= 175)
+				{
+					index = 12;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				if (x >= 200 && x <= 275)
+				{
+					index = 11;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				if (x >= 300 && x <= 375)
+				{
+					index = 10;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				if (x >= 400 && x <= 475)
+				{
+					index = 9;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				if (x >= 500 && x <= 575)
+				{
+					index = 8;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				if (x >= 600 && x <= 675)
+				{
+					index = 7;
+					if (mancala[index] == 0)
+						return;
+					temp = mancala[index];
+					mancala[index] = 0;
+				}
+				player = 1;
+			}
+		}
+
+		for(int i = index + 1; i<= index + temp; i ++){
+			if(i > 13){
+				mancala[i - 14]++;
+			}
+			else{
+				mancala[i]++;
+			}
+			
+			if(i == 13){
+				player =2;
+			}
+			if(i == 6){
+				player = 1;
+			}
+		}
+
+	}
+
+
+
+
+
+
+	public static void draw() {
+		Zen.setBackground("tan");
+		int x = 0;
+		Zen.setFont("Arial", 30);
+
 		for(x = 0; x < 14; x ++){
-			
-			
-			
+			Zen.setColor("red");
 			if(x ==6){
-				Zen.fillOval(  x * scale + 100, 50 ,  75, 200);
-				Zen.drawText(Integer.toString(mancala[x]), x * scale + 100 , 225);
+				Zen.fillOval( 700, 50 ,  75, 200);
+				Zen.setColor("black");
+				Zen.drawText(Integer.toString(mancala[x]), 725 , 150);
 			}
 			else if ( x == 13){
-				Zen.fillOval( x - x, 50, 75, 200);
-				Zen.drawText(Integer.toString(mancala[x]), x -x , 50);
+				Zen.fillOval( 0, 50, 75, 200);
+				Zen.setColor("black");
+				Zen.drawText(Integer.toString(mancala[x]), 25, 150);
 			}
 			else if(x < 6){
 				Zen.fillOval(x * scale + 100 , 150, 75, 75);
-				Zen.drawText(Integer.toString(mancala[x]), x * scale + 100 , 225);
+				Zen.setColor("black");
+				Zen.drawText(Integer.toString(mancala[x]), x * scale + 150 , 200);
 			}
 			else if(x > 6 && x < 13){				
-				Zen.fillOval((x - 7) * scale + 100, 50, 75, 75);
-				Zen.drawText(Integer.toString(mancala[x]), (x - 7) * scale + 100 , 65);
+				Zen.fillOval((12 - x) * scale + 100, 50, 75, 75);
+				Zen.setColor("black");
+				Zen.drawText(Integer.toString(mancala[x]), (12 - x) * scale + 150 , 100);
 			}
-			
-			if(x != 6 && x!= 13){
-				mancala[x] = 4;
-				//Zen.drawText(Integer.toString(mancala[x + 1]), x * scale + 100 , 225);
-				//Zen.drawText(Integer.toString(mancala[x + 1]), (x-7) * scale + 100 , 65);
-			}
-			else {
-				mancala[x] = 0;
-			
-			}
-			
-		
+
 		}
-		
-		
+
+		Zen.buffer(1);
+	}
+	public static void endGame()
+	{      
+		if (checkEmpty1()){
+			for (int i = 7; i < 13; i++)
+			{
+				mancala[13] += mancala[i];
+				mancala[i] = 0;
+			}
+		}
+		else if (checkEmpty2())
+		{
+			for (int i = 0; i < 6; i++)
+			{
+				mancala[6] += mancala[i];
+				mancala[i] = 0;
+			}
+		}
+
+
+	}
+
+	public static boolean checkEmpty1()
+	{
+		int count = 0;
+
+		for (int i = 0; i < 6; i++)
+		{
+			if (mancala[i] == 0)
+				count++;
+		}
+
+		if (count == 6)
+			return true;
+
+		return false;
+	}
+
+	public static boolean checkEmpty2()
+	{
+		int count = 0;
+
+		for (int i = 7; i < 13; i++)
+		{
+			if (mancala[i] == 0)
+				count++;
+		}
+
+		if (count == 6)
+			return true;
+
+		return false;          
 	}
 
 	public static void setup() {
-		for(x = 0; x < 14; x++){
-			if(x!=6 && x != 13){
-				mancala[x] = 4;
+		for( int i = 0; i < 14; i++){
+			if(i!=6 && i!= 13){
+				mancala[i] = 4;
 			}
 			else{
-				mancala[x] = 0;
+				mancala[i] = 0;
 			}
 		}
-		
+
 		Zen.create (8*scale, 3*scale);
-		Zen.setBackground("tan");
-		
-		
+
+
+
 	}
-	
-	
+
+
 
 }
